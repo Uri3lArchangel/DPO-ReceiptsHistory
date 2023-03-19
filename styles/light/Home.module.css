@@ -1,7 +1,7 @@
 .sideBar
 {
-    background-image: var(--sideBar_bg_gradient_dark);
-    color: var(--sideBar_text_dark);
+    background-image: var(--sideBar_bg_gradient_light);
+    color: var(--sideBar_text_light);
     position: absolute;
     top: 0;
     left: -400px;
@@ -14,8 +14,8 @@
 }
 .sideBar li a{
     display: block;
-    border: 2px solid var(--sideBar_border_dark);
-    color: var(--sideBar_text_dark);
+    border: 2px solid var(--sideBar_border_light);
+    color: var(--sideBar_text_light);
     font-size: 2rem;
     padding: 0.5em;
     margin: auto;
@@ -28,7 +28,7 @@
  
 }
 .sideBar li a:hover{
-    background-color: var(--sideBar_bg_link_hover_dark);
+    background-color: var(--sideBar_bg_link_hover_light);
 }
 .cancelLogo{
     width: 15%;
@@ -37,14 +37,14 @@
 
 }
 .topBar{
-    background-image: var(--topBar_bg_gradient_dark);
+    background-image: var(--topBar_bg_gradient_light);
     border-bottom-left-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
     padding: 1em ;
     position: fixed;
     width: 100%;
     z-index: 2;
-    border-bottom: 3px solid var(--sideBar_bg_link_hover_dark);
+    border-bottom: 3px solid var(--sideBar_bg_link_hover_light);
     
 
 }
@@ -62,29 +62,29 @@
     font-size: 2rem;
     font-family: boiled;
     margin: 0 0.4em;
-    color: var(--sideBar_text_dark);
+    color: var(--sideBar_text_light);
 }
 .body{
-    background-color:var(--black_dark);
+    background-color:var(--black_light);
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
-    color: var(--white_dark);
+    color: var(--white_light);
     padding: 10em 1.5em 0 1.5em;
     overflow-y: scroll;
 }
 .body label{
-    /* color: var(--white_dark); */
+    /* color: var(--white_light); */
     font-size: 2rem;
     
 }
 .eventContainer{
     width: 100%;
     min-height: 40px;
-    background-color: var(--white_dark);
+    background-color: var(--white_light);
     border-radius: 0.7rem;
-    color:var(--black_dark);
+    color:var(--black_light);
     font-size: 1.9rem;
     padding: 0 0.3em;
     max-height: 70px;
@@ -94,9 +94,9 @@
 .receiptDiv{
     width: 100%;
     min-height: 120px;
-    background-color: var(--white_dark);
+    background-color: var(--white_light);
     border-radius: 0.7rem;
-    color:var(--black_dark);
+    color:var(--black_light);
     font-size: 1.9rem;
     padding: 0 0.3em;
     max-height: 220px;
@@ -104,7 +104,7 @@
     margin: 0.4em 0;
 }
 .indexes{
-    border: 1px solid var(--sideBar_border_dark);
+    border: 1px solid var(--sideBar_border_light);
     border-radius: 0.5rem;
     padding: 0.6em;
 }
@@ -114,8 +114,8 @@
 .switchMode{
     position: fixed;
     z-index: 5;
-    color: var(--white_dark);
-    background-color: var(--sideBar_border_dark);
+    color: var(--white_light);
+    background-color: var(--sideBar_border_light);
     border-radius: 100%;
     width:25%;
     bottom: 5%;
