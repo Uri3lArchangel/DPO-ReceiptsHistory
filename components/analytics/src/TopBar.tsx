@@ -9,7 +9,7 @@ function TopBar({mode}:any) {
         <h1>DIRECT PRIVATE OFFERS &quot;Global Expert Market&quot; </h1>
       </div>
       <div className={mode.imageContainer}>
-        <Image src={logo} />
+        <Image alt='DPO' src={logo} />
         <span>Recipts</span>
       </div>
     </div>

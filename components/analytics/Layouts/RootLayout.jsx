@@ -1,10 +1,8 @@
 import React from 'react'
-import SideBar from '/components/analytics/src/SideBar'
 import TopBar from '/components/analytics/src/TopBar'
 import Head from 'next/head'
 import Footer from '../src/Footer'
 import hm_l from "/styles/light/Home.module.css";
-import hm_d from "/styles/Home.module.css";
 
 let hm = hm_l
 
@@ -18,7 +16,6 @@ function RootLayout({children}) {
         <link rel="icon" href="/assets/handshake.png" />
     </Head>
     <TopBar mode={hm} />
-    {/* <SideBar /> */}
     <main mode={hm}>{children}</main>
     <Footer />
     </>
