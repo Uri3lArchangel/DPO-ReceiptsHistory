@@ -9,14 +9,14 @@
   --sideBar_border_dark:#888888;
   --sideBar_text_dark:#ffffff;
   --sideBar_bg_link_hover_dark:#33333388;
-  --topBar_bg_gradient_dark:linear-gradient(to left,#000000d4,#8b0e8b);
+  --topBar_bg_color:#607d8b;
   --black_dark:#000000;
   --white_dark:#ffffff;
   --sideBar_bg_gradient_light:linear-gradient(to top right,#8800ff,1%,#000000);
   --sideBar_border_light:#888888;
   --sideBar_text_light:#ffffff;
   --sideBar_bg_link_hover_light:#33333388;
-  --topBar_bg_gradient_light:linear-gradient(to left,#ffffff,#8b0e8b);
+  --topBar_bg_gradient_dark:linear-gradient(to left,#ffffff,#8b0e8b);
   --black_light:#ffffff;
   --white_light:#000000;
 }

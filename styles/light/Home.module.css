@@ -37,35 +37,45 @@
 
 }
 .topBar{
-    background-image: var(--topBar_bg_gradient_light);
     border-bottom-left-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
-    padding: 1em ;
     position: fixed;
     width: 100%;
     z-index: 2;
-    border-bottom: 3px solid var(--sideBar_bg_link_hover_light);
+    box-shadow: 1px 0 10px #00000055;
     
 
 }
-.logoContainer{
+.topContainer{
    margin: auto;
-   width: fit-content;
+   width: 100%;
    cursor: pointer;
+   padding: 1.5em 0;
+   background-color: var(--topBar_bg_color);
+
 }
-.logoContainer img{
-    width: 40%;
-    height: 30px;
-    
-}
-.logoContainer span{
+
+.topContainer h1{
     font-size: 2rem;
+    text-align: center;
+    font-weight: 100;
     font-family: boiled;
     margin: 0 0.4em;
     color: var(--sideBar_text_light);
 }
+ .imageContainer{
+display: flex;
+align-items: center;
+margin: auto;
+width: fit-content;
+
+}
+.imageContainer span{
+    font-size: 1.5rem;
+    font-family: boiled;
+}
 .body{
-    background-color:var(--black_light);
+    background-image: url(../../public/assets/alt3.png);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -81,32 +91,40 @@
 }
 .eventContainer{
     width: 100%;
-    min-height: 40px;
+    min-height: 30px;
     background-color: var(--white_light);
     border-radius: 0.7rem;
     color:var(--black_light);
     font-size: 1.9rem;
     padding: 0 0.3em;
-    max-height: 70px;
-    overflow-y: scroll;
     margin: 0.4em 0;
 }
 .receiptDiv{
     width: 100%;
-    min-height: 120px;
-    background-color: var(--white_light);
+    min-height: 200px;
+    border: 1px solid var(--white_light);
     border-radius: 0.7rem;
-    color:var(--black_light);
+    color:var(--white_light);
     font-size: 1.9rem;
     padding: 0 0.3em;
-    max-height: 220px;
+    max-height: 400px;
     overflow-y: scroll;
     margin: 0.4em 0;
 }
+.receiptDiv li{
+    background-image:var(--topBar_bg_gradient_light);
+    padding:0.5em;
+    margin: 0.4em 0;
+    border-radius: 0.7rem;
+}
 .indexes{
-    border: 1px solid var(--sideBar_border_light);
     border-radius: 0.5rem;
-    padding: 0.6em;
+    box-shadow: 1px 1px 20px #00000055;
+    width: 50%;
+    margin: auto;
+    margin-top: 4em;
+    padding: 1.5em;
+    background-color: white;
 }
 .indexes hr{
     margin: 1em 0;
@@ -123,4 +141,9 @@
     cursor: pointer;
     padding: 1em;
     cursor: pointer;
+}
+@media screen and (max-width:640px) {
+    .indexes{
+        width: 100%;
+    }
 }

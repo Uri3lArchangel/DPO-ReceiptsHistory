@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true
-  },, "components/Backend/index.js"
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Backend/index.js"],
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Backend/index.js", "components/Backend/ipfs/index.ts"],
   "exclude": ["node_modules"]
 }

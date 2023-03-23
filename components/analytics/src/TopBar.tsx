@@ -1,14 +1,16 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import React from 'react'
-import hm from'../../../styles/Home.module.css'
-import logo from '/public/assets/dpo-logo-header.png'
+import logo from '/public/assets/directprivateoffers-logo-bd.png'
 
-function TopBar() {
+function TopBar({mode}:any) {
   return (
-    <div className={hm.topBar}>
-      <div className={hm.logoContainer}>
-        <Image src={logo} alt='DPO' />
-        <span>Analytics</span>
+    <div className={mode.topBar}>
+      <div className={mode.topContainer}>
+        <h1>DIRECT PRIVATE OFFERS "Global Expert Market" </h1>
+      </div>
+      <div className={mode.imageContainer}>
+        <Image src={logo} />
+        <span>Recipts</span>
       </div>
     </div>
   )

@@ -6,14 +6,14 @@ import {XMarkIcon} from '@heroicons/react/24/outline'
 function SideBar() {
   return (
     <div className={hm.sideBar}>
-      <ul>
+      {/* <ul>
       <XMarkIcon className={hm.cancelLogo} />
         <li><Link href='#'>Receipts</Link></li>
         <li><Link href='#'>Token Holders</Link></li>
         <li><Link href='#'>Market</Link></li>
         <li><Link href='#'>Total Supply</Link></li>
         <li><Link href='#'>Token Details</Link></li>
-      </ul>
+      </ul> */}
     </div>
   )
 }

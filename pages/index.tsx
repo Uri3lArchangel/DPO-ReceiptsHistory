@@ -1,22 +1,41 @@
-import hm_d from "../styles/Home.module.css";
 import RootLayout from "../components/analytics/Layouts/RootLayout";
-import { LightBulbIcon } from "@heroicons/react/24/outline";
 import ReceiptIndex from "../components/analytics/src/ReceiptIndex";
 import hm_l from "/styles/light/Home.module.css";
-import { useEffect, useState } from "react";
 
-let hm = hm_d;
+let hm = hm_l
+interface PROP{
+  data:object[]|[]
+}
 
-export default function Main() {
+export default function Main({data}:PROP) {
+
   return (
     <>
       <RootLayout>
-        <LightBulbIcon className={hm.switchMode}/>
+        {/* <LightBulbIcon className={hm.switchMode}/> */}
         <div className={hm.body}>
-          <ReceiptIndex mode={hm} />
-          <button>fetch</button>
+        <h1>Transaction Recipts</h1>
+          {data.map((items,index)=>(<ReceiptIndex mode={hm} data={items} index={index} />))}
         </div>
       </RootLayout>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  let data:Object[]=[]
+  let res = await fetch('http://localhost:3000/api/txdata',{
+    method:'GET',
+
+  
+  })
+  if(res){
+   data =(await res.json()).message
+  }
+
+  return{
+    props:{
+      data
+    }
+  }
 }
