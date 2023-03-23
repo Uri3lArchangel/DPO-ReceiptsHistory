@@ -27,7 +27,8 @@ export async function getServerSideProps() {
   let data:Object[]=[]
   let res = await fetch(`https://dpo-receipts-history.vercel.app/api/txdata`,{
     method:'GET',
-  mode:'no-cors'
+  mode:'no-cors',
+  referrer:'dpo-receipts-history.vercel.app'
   
   })
   if(res){
