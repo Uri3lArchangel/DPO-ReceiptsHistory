@@ -15,7 +15,7 @@ export default function Main({data}:PROP) {
         {/* <LightBulbIcon className={hm.switchMode}/> */}
         <div className={hm.body}>
         <h1>Transaction Recipts</h1>
-          {data.map((items,index)=>(<ReceiptIndex mode={hm} data={items} index={index} />))}
+          {data.map((items,index)=>(<ReceiptIndex mode={hm} data={items} index={index} key={index} />))}
         </div>
       </RootLayout>
     </>
