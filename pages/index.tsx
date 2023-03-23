@@ -25,7 +25,7 @@ export default function Main({data}:PROP) {
 export async function getServerSideProps() {
   try{
   let data:Object[]=[]
-  let res = await fetch('http://127.0.0.1/api/txdata',{
+  let res = await fetch('http://127.0.0.1:3000/api/txdata',{
     method:'GET',
   mode:'no-cors'
   
