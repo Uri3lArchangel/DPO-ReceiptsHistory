@@ -23,12 +23,12 @@ export default function Main({data}:PROP) {
 }
 
 export async function getServerSideProps() {
-  
+  const url ='dpo-receipts-history.vercel.app'
   let data:Object[]=[]
   let res = await fetch(`https://dpo-receipts-history.vercel.app/api/txdata`,{
     method:'GET',
   mode:'no-cors',
-  referrer:'http://dpo-receipts-history.vercel.app/'
+  referrer:url
   
   })
   if(res){
