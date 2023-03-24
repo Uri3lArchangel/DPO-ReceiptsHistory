@@ -8,12 +8,11 @@ const MONGO_USER = process.env.MONGO_USER
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try{
+  
     if(req.method !='GET'){
       res.status(405).json({'message':'Method not allowed only GET method is permited'})
     }
   let a = await run()
-
 
   if (a) {
     const client = await MongoClient.connect(`mongodb+srv://${MONGO_USER}:${MONGO_PASS}@txrcpt.cw0xlsv.mongodb.net/TXRECPTS?retryWrites=true&w=majority`);
@@ -27,6 +26,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         for (let j = 0; j < txdata.length; j++) {
           if (txdata[j].Block_number === a[i].Block_number) {
             duplicate = true
+          }else{
+            res.status(200).json({ message: txdata });
           }
         }
       }
@@ -35,7 +36,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } else {
         (await RECEIPTS.insertOne(a[i]))
          txdata = await RECEIPTS.find().toArray()
-
       }
     }
 
@@ -43,7 +43,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 
-  }catch(err){
-    console.error(err)
-  }
+
 }

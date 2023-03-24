@@ -24,15 +24,14 @@ export default function Main({data}:PROP) {
 
 export async function getServerSideProps() {
   let data:Object[]=[]
-  let res = await fetch(`https://dpo-receipts-history.vercel.app/api/txdata`,{
-    method:'GET',
-  mode:'no-cors',
-  referrer:'https://dpo-receipts-history.vercel.app'
-  
+  let res = await fetch(`http://localhost:3000/api/txdata`,{
+    method:'GET'
   })
+  
   if(res){
    data =(await res.json()).message
   }
+
 
   return{
     props:{

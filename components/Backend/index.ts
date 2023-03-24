@@ -1,6 +1,6 @@
 import Web3 from 'web3';
 import { output } from './DPOabi.json';
-const url = process.env.QUICKNODE_URL!;
+const url ='https://arb1.arbitrum.io/rpc';
 const web3 = new Web3(url);
 let blocknumberReceipts: number[] =[]
 let isDuplicate = false
@@ -68,6 +68,7 @@ export async function run() {
   }
 
   lastCheckedBlockNumber = latestBlockNumber;
+  console.log('step1',data)
 
   return data
 }
