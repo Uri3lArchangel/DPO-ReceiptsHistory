@@ -48,7 +48,7 @@ async function logReceipt(receipt: any) {
 
 export async function run() {
   const currentBlockNumber = await web3.eth.getBlockNumber();
-  let lastCheckedBlockNumber = currentBlockNumber - 100;
+  let lastCheckedBlockNumber = currentBlockNumber - 10;
 
   const latestBlockNumber = await web3.eth.getBlockNumber();
 
