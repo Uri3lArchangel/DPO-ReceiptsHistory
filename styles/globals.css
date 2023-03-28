@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: poppins;
+  src: url(../components/fonts/Poppins-SemiBold.ttf);
+}
+
 :root{
   font-size: 10px;
   --sideBar_bg_gradient_dark:linear-gradient(to top right,#8800ff,1%,#000000);
