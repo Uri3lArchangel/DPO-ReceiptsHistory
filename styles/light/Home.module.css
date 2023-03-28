@@ -83,6 +83,8 @@ width: fit-content;
     position: absolute;
     height: 100%;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     top: 0;
     color: var(--white_light);
     padding: 10em 1.5em 0 1.5em;
